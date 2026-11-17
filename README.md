@@ -4,10 +4,15 @@ Works for **Oneplus Realme Oppo** and other android os as well you just have to 
 
 Got fed up with Android's rotation suggestion popup appearing over my keyboard, with no option to reposition it. So I built **Rotation Popup Toggle**, a lightweight Java Android app that lets users enable or disable rotation suggestions directly from Quick Settings.
 
-## Features
 
+
+<img width="400" height="147" alt="1776373907377356803" src="https://github.com/user-attachments/assets/7b120bc5-bc95-4d34-acf6-84adba6e589c" />
+
+
+
+## Features
 - Enable or disable rotation suggestions from Quick Settings.
-- Lightweight Java-based Android application.
+- Lightweight 
 - No unnecessary background services.
 - Simple ON/OFF toggle.
 
