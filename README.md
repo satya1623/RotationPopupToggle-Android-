@@ -22,7 +22,7 @@ Got fed up with Android's rotation suggestion popup appearing over my keyboard, 
 2. Open **Developer Options** on your phone.
 3. Enable **USB Debugging**.
 4. Disable **Permission Monitoring** in developer options (depends on your phone model).
-5. Connect your phone to your PC.
+5. Connect your phone to your PC and FORCE STOP installed app once (Rotation Popup Toggle apk)
 6. Open ADB and run:
 
    `adb shell pm grant com.example.rotationtile android.permission.WRITE_SECURE_SETTINGS`
