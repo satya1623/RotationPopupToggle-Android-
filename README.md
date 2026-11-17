@@ -1,21 +1,39 @@
-# Rotation Popup Toggle Quick Settings Tile (Java)
+# Rotation Popup Toggle — Android
 
 Got fed up with Android's rotation suggestion popup appearing over my keyboard, with no option to reposition it. So I built **Rotation Popup Toggle**, a lightweight Java Android app that lets users enable or disable rotation suggestions directly from Quick Settings.
 
+## Features
+
+- Enable or disable rotation suggestions from Quick Settings.
+- Lightweight Java-based Android application.
+- No unnecessary background services.
+- Simple ON/OFF toggle.
+
 ## Setup & Usage
 
-Open this folder as a project in Android Studio. Allow Gradle sync. Build > Build APK(s), then install the debug APK.
+1. Download and install the APK from **Releases**.
+2. Open **Developer Options** on your phone.
+3. Enable **USB Debugging**.
+4. Disable **Permission Monitoring** in developer options (depends on your phone model).
+5. Connect your phone to your PC.
+6. Open ADB and run:
 
-### One-time ADB grant from a connected PC:
+   `adb shell pm grant com.example.rotationtile android.permission.WRITE_SECURE_SETTINGS`
 
-```sh
-adb shell pm grant com.example.rotationtile android.permission.WRITE_SECURE_SETTINGS
-```
+7. Add **Rotation Popup Toggle** to your Quick Settings panel.
+8. Tap the tile to enable or disable rotation suggestions.
 
-Open Quick Settings > Edit and add **Rotation Popup Toggle**. Tap to toggle the `Settings.Secure` key `show_rotation_suggestions` (1/0).
+## How It Works
 
-If the ADB grant returns `SecurityException`, the phone's firmware may block this permission. The app cannot bypass it without a different privileged mechanism. OEM firmware may ignore this setting, and tiles may be cached until panel reopening.
+- **ON:** Rotation suggestion popup is enabled.
+- **OFF:** Rotation suggestion popup is disabled.
+
+## Compatibility
+
+- Android 7.0 and above.
+- Requires `WRITE_SECURE_SETTINGS` permission.
+- Some manufacturers restrict ADB permission grants.
 
 ## License
 
-[MIT License](LICENSE)
+Licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
